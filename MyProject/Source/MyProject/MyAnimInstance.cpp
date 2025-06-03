@@ -19,7 +19,7 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 		
 		Speed = Pawn->GetCharacterMovement()->Velocity.Size2D();
-		bIsCrouched = !Pawn->CanCrouch();//폰 아닐경우? 앉기함수
+		bIsCrouched = !Pawn->CanCrouch();//예외처리 "이 Pawn이 앉을 수 없는 상태라면 bIsCrouched를 true로 간주하자"
 
 		//방향 계산 함수 CalculateDirection(velocity,Rotation)
 		Direction = UKismetAnimationLibrary::CalculateDirection(Pawn->GetCharacterMovement()->Velocity,
@@ -44,7 +44,12 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		{
 			TargetSpineAngle = 0.0f;
 		}
-	
+
+		CurrentSpineAngle = FMath::FInterpTo(CurrentSpineAngle, TargetSpineAngle, DeltaSeconds, 8.0f);
+
+
+		AimYaw = Pawn->GetBaseAimRotation().Yaw;
+		AimPitch = Pawn->GetBaseAimRotation().Pitch;
 	
 
 	}

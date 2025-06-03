@@ -7,9 +7,18 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "EnhancedInputComponent.h"
-//
+//kismet - 애니메이션에 관한 전반적인 수학 공식
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
+
+
+//템플릿 사용
+//1. 클래스 생성
+// 
+// CreateDefaultSubobject < 클래스 >(TEXT("클래스명"))
+//
+// 여기서 클래스는 헤더에서 전방선언 되어있어야함.
+//include도 되어이썽야함.
 
 
 
@@ -25,19 +34,24 @@ AMyCharacter::AMyCharacter()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera -> SetupAttachment(CameraBoom);
 
+	// GetMesh()
+	// ->  다음거 해
+	//-GetCapsulComponent()->GetScaledCapsuleHalfHeight() = 캡슐의 반크기만큼 음수값으로 이동
 	GetMesh()->SetRelativeLocationAndRotation(
 		FVector(0, 0, -GetCapsuleComponent()->GetScaledCapsuleHalfHeight()),
 		FRotator(0, -90.0f, 0)
 	);
-	
+	//무기
+	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	Weapon->SetupAttachment(GetMesh(), TEXT("hand_rSocket"));
+
 }
 
 // Called when the game starts or when spawned
 void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	APlayerController* PC = Cast<APlayerController>(Controller);
-
+	
 	
 }
 
@@ -72,14 +86,19 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 		UEIC->BindAction(IA_Zoom, ETriggerEvent::Triggered, this, &AMyCharacter::OnZoom);
 		
+
 		UEIC->BindAction(IA_Fire, ETriggerEvent::Triggered, this, &AMyCharacter::OnFire);
+		UEIC->BindAction(IA_Fire, ETriggerEvent::Completed, this, &AMyCharacter::OnEndFire);
 
 		UEIC->BindAction(IA_RightLean, ETriggerEvent::Triggered, this, &AMyCharacter::OnRightLean);
+		UEIC->BindAction(IA_RightLean, ETriggerEvent::Completed, this, &AMyCharacter::OnEndRightLean);
 
 		UEIC->BindAction(IA_LeftLean, ETriggerEvent::Triggered, this, &AMyCharacter::OnLeftLean);
+		UEIC->BindAction(IA_LeftLean, ETriggerEvent::Completed, this, &AMyCharacter::OnEndLeftLean);
 
-		//IMC
 		UEIC->BindAction(IA_Crouch, ETriggerEvent::Triggered, this, &AMyCharacter::OnCrouch);
+		UEIC->BindAction(IA_Reload, ETriggerEvent::Triggered, this, &AMyCharacter::OnReload);
+		
 	}
 
 
@@ -133,6 +152,7 @@ void AMyCharacter::OnLook(const FInputActionValue& value)
 
 void AMyCharacter::OnZoom(const FInputActionValue& value)
 {
+	//CameraBoom->TargetArmLength = FMath::FInterpTo(SpringArm->TargetArmLength, CameraBoom->TargetArmLength + Value.Get<float>() * -200.0f, UGameplayStatics::GetWorldDeltaSeconds(GetWorld()), 10.0f);
 
 	CameraBoom->TargetArmLength += value.Get<float>() * -10.0f;
 	CameraBoom->TargetArmLength = FMath::Clamp(CameraBoom->TargetArmLength,100.0f,
@@ -186,17 +206,17 @@ void AMyCharacter::OnLeftLean(const FInputActionValue& value)
 	bIsLeftLean = true;
 }
 
-void AMyCharacter::EndFire(const FInputActionValue& value)
+void AMyCharacter::OnEndFire(const FInputActionValue& value)
 {
 	bIsFire = false;
 }
 
-void AMyCharacter::EndRightLean(const FInputActionValue& value)
+void AMyCharacter::OnEndRightLean(const FInputActionValue& value)
 {
 	bIsRightLean = false;
 }
 
-void AMyCharacter::EndLeftLean(const FInputActionValue& value)
+void AMyCharacter::OnEndLeftLean(const FInputActionValue& value)
 {
 	bIsLeftLean = false;
 }

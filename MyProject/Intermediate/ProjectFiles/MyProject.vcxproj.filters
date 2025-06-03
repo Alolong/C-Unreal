@@ -33,6 +33,18 @@
     <Filter Include="Source\MyProject">
       <UniqueIdentifier>{E24959B1-EBAF-399D-9D3A-65ADD2D94AF5}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyProject\AnimNotifyState_PrintMessage.cpp">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject\AnimNotifyState_PrintMessage.h">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject\AnimNotify_PrintMessage.cpp">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject\AnimNotify_PrintMessage.h">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\MyProject\MyAnimInstance.cpp">
       <Filter>Source\MyProject</Filter>
     </ClCompile>
@@ -65,6 +77,21 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\MyProject\MyProject.h">
       <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <Filter Include="Source\MyProject\Zombie">
+      <UniqueIdentifier>{E55D1E21-6881-3C14-8C93-688510212E7E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyProject\Zombie\Zombie.cpp">
+      <Filter>Source\MyProject\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject\Zombie\Zombie.h">
+      <Filter>Source\MyProject\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject\Zombie\ZombieAIController.cpp">
+      <Filter>Source\MyProject\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject\Zombie\ZombieAIController.h">
+      <Filter>Source\MyProject\Zombie</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

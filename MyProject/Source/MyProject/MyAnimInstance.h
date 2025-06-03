@@ -9,6 +9,8 @@
 /**
  * 
  */
+
+//사격 애니메이션
 UCLASS()
 class MYPROJECT_API UMyAnimInstance : public UAnimInstance
 {

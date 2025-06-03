@@ -50,40 +50,46 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "Components", BlueprintReadOnly)
 	TObjectPtr<UCameraComponent> Camera;
 
+	UPROPERTY(VisibleAnywhere, Category = "Components", BlueprintReadOnly)
+	TObjectPtr<USkeletalMeshComponent> Weapon;
 
 	//매핑
 	//TObjectPtr<> - 구조체 <클래스> 
 
-	UPROPERTY(EditAnywhere, Category="Input")
+	UPROPERTY(BlueprintReadOnly, Category="Input", EditAnywhere)
 	TObjectPtr<UInputAction> IA_Move;
 
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_Look;
 
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_Zoom;
 
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_Jump;
 
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_Crouch;
 
 	//총기 좌우
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_Fire;
 
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_RightLean;
 
-	UPROPERTY(EditAnywhere, Category = "Input")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> IA_LeftLean;
 
-
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> IA_Reload;
 
 	//IMC
 	UPROPERTY(EditAnywhere, Category = "Input")
 	TObjectPtr<UInputMappingContext> IMC_Default;
+
+
+
 
 
 
@@ -107,11 +113,11 @@ public:
 
 	void OnLeftLean(const FInputActionValue& value);
 
-	void EndFire(const FInputActionValue& value);
+	void OnEndFire(const FInputActionValue& value);
 
-	void EndRightLean(const FInputActionValue& value);
+	void OnEndRightLean(const FInputActionValue& value);
 
-	void EndLeftLean(const FInputActionValue& value);
+	void OnEndLeftLean(const FInputActionValue& value);
 
 
 	UPROPERTY(BlueprintReadOnly, Category = "Animations", EditAnywhere)
@@ -121,13 +127,13 @@ public:
 	TObjectPtr<UAnimMontage> AM_Hit;
 
 
-	UPROPERTY(EditAnywhere, Category = "State")
+	UPROPERTY(BlueprintReadOnly, Category = "State", EditAnywhere)
 	uint8 bIsFire : 1;
 
-	UPROPERTY(EditAnywhere, Category = "State")
+	UPROPERTY(BlueprintReadOnly,  Category = "State", EditAnywhere)
 	uint8 bIsLeftLean : 1;
 
-	UPROPERTY(EditAnywhere, Category = "State")
+	UPROPERTY(BlueprintReadOnly,  Category = "State", EditAnywhere)
 	uint8 bIsRightLean : 1;
 
 

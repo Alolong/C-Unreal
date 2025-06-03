@@ -85,11 +85,14 @@ struct Z_Construct_UClass_UMyAnimInstance_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * \n *///\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xd6\xb4\xcf\xb8\xef\xbf\xbd\xef\xbf\xbd\xcc\xbc\xef\xbf\xbd\n" },
 #endif
 		{ "HideCategories", "AnimInstance" },
 		{ "IncludePath", "MyAnimInstance.h" },
 		{ "ModuleRelativePath", "MyAnimInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xd6\xb4\xcf\xb8\xef\xbf\xbd\xef\xbf\xbd\xcc\xbc\xef\xbf\xbd" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Speed_MetaData[] = {
 		{ "Category", "State" },
@@ -246,14 +249,14 @@ UMyAnimInstance::~UMyAnimInstance() {}
 // End Class UMyAnimInstance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C___C_Pro_C__Char_MyProject_Source_MyProject_MyAnimInstance_h_Statics
+struct Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 2149153188U) },
+		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 1946404580U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C_Pro_C__Char_MyProject_Source_MyProject_MyAnimInstance_h_2480384996(TEXT("/Script/MyProject"),
-	Z_CompiledInDeferFile_FID_C___C_Pro_C__Char_MyProject_Source_MyProject_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C_Pro_C__Char_MyProject_Source_MyProject_MyAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_110347650(TEXT("/Script/MyProject"),
+	Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

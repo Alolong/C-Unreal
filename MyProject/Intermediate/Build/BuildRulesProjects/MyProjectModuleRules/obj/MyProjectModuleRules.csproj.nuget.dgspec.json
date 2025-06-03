@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C++\\C++Char\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj": {}
+    "D:\\C++\\C++Unreal\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj": {}
   },
   "projects": {
-    "D:\\C++\\C++Char\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj": {
+    "D:\\C++\\C++Unreal\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C++\\C++Char\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj",
+        "projectUniqueName": "D:\\C++\\C++Unreal\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj",
         "projectName": "MyProjectModuleRules",
-        "projectPath": "D:\\C++\\C++Char\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj",
+        "projectPath": "D:\\C++\\C++Unreal\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\MyProjectModuleRules.csproj",
         "packagesPath": "C:\\Users\\권재경\\.nuget\\packages\\",
-        "outputPath": "D:\\C++\\C++Char\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\obj\\",
+        "outputPath": "D:\\C++\\C++Unreal\\MyProject\\Intermediate\\Build\\BuildRulesProjects\\MyProjectModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
