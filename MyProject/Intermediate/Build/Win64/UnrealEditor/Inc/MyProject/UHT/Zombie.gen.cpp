@@ -158,7 +158,7 @@ AZombie::~AZombie() {}
 // End Class AZombie
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics
+struct Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EZombieState_StaticEnum, TEXT("EZombieState"), &Z_Registration_Info_UEnum_EZombieState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2829920005U) },
@@ -167,9 +167,9 @@ struct Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie
 		{ Z_Construct_UClass_AZombie, AZombie::StaticClass, TEXT("AZombie"), &Z_Registration_Info_UClass_AZombie, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AZombie), 3449572981U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_1575806353(TEXT("/Script/MyProject"),
-	Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_1575806353(TEXT("/Script/MyProject"),
+	Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_Zombie_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

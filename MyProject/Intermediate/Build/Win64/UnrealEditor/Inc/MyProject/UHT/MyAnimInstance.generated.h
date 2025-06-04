@@ -15,11 +15,11 @@ class UAnimNotify;
 #endif
 #define MYPROJECT_MyAnimInstance_generated_h
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execAnimNotify_HelloWorldCpp);
 
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyAnimInstance(); \
 	friend struct Z_Construct_UClass_UMyAnimInstance_Statics; \
@@ -28,7 +28,7 @@ public: \
 	DECLARE_SERIALIZER(UMyAnimInstance)
 
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMyAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -42,13 +42,13 @@ public: \
 	NO_API virtual ~UMyAnimInstance();
 
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_14_PROLOG
-#define FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_GENERATED_BODY \
+#define FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_14_PROLOG
+#define FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_INCLASS_NO_PURE_DECLS \
-	FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_ENHANCED_CONSTRUCTORS \
+	FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_INCLASS_NO_PURE_DECLS \
+	FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,7 +56,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> MYPROJECT_API UClass* StaticClass<class UMyAnimInstance>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_C___C__Unreal_MyProject_Source_MyProject_MyAnimInstance_h
+#define CURRENT_FILE_ID FID_C_Unreal_MyProject_Source_MyProject_MyAnimInstance_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

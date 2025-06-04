@@ -17,13 +17,13 @@ struct FAIStimulus;
 #endif
 #define MYPROJECT_ZombieAIController_generated_h
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execProcessPerceptionInfoUpdated); \
 	DECLARE_FUNCTION(execProcessPerceptionForgetUpdated); \
 	DECLARE_FUNCTION(execProcessPerceptionUpdated);
 
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_INCLASS_NO_PURE_DECLS \
+#define FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZombieAIController(); \
 	friend struct Z_Construct_UClass_AZombieAIController_Statics; \
@@ -32,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(AZombieAIController)
 
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_ENHANCED_CONSTRUCTORS \
+#define FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AZombieAIController(AZombieAIController&&); \
@@ -44,13 +44,13 @@ public: \
 	NO_API virtual ~AZombieAIController();
 
 
-#define FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_31_PROLOG
-#define FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_GENERATED_BODY \
+#define FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_31_PROLOG
+#define FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_INCLASS_NO_PURE_DECLS \
-	FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_ENHANCED_CONSTRUCTORS \
+	FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_INCLASS_NO_PURE_DECLS \
+	FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_34_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +58,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> MYPROJECT_API UClass* StaticClass<class AZombieAIController>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h
+#define CURRENT_FILE_ID FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -96,14 +96,14 @@ UAnimNotify_PrintMessage::~UAnimNotify_PrintMessage() {}
 // End Class UAnimNotify_PrintMessage
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_Statics
+struct Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UAnimNotify_PrintMessage, UAnimNotify_PrintMessage::StaticClass, TEXT("UAnimNotify_PrintMessage"), &Z_Registration_Info_UClass_UAnimNotify_PrintMessage, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAnimNotify_PrintMessage), 1700880898U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_474252989(TEXT("/Script/MyProject"),
-	Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_474252989(TEXT("/Script/MyProject"),
+	Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_AnimNotify_PrintMessage_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

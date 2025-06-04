@@ -248,14 +248,14 @@ AZombieAIController::~AZombieAIController() {}
 // End Class AZombieAIController
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_Statics
+struct Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AZombieAIController, AZombieAIController::StaticClass, TEXT("AZombieAIController"), &Z_Registration_Info_UClass_AZombieAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AZombieAIController), 695392242U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_1434065326(TEXT("/Script/MyProject"),
-	Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_1434065326(TEXT("/Script/MyProject"),
+	Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_MyProject_Source_MyProject_Zombie_ZombieAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
