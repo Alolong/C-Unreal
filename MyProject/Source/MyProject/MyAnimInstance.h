@@ -9,6 +9,7 @@
 /**
  * 
  */
+//ABP로 만들어줌
 
 //사격 애니메이션
 UCLASS()
@@ -20,10 +21,13 @@ public:
 	//상속 : 초당 업데이트 되는 애니메이션
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 
+
+	//블루프린트에서 톱니바퀴 모양 클릭 ->Show Inherited variables// 변수선언은 이쪽
 	//스피드 변수
 	UPROPERTY(BlueprintReadOnly, Category = "State", VisibleAnywhere)
 	float Speed;
 	//crouch on off
+	// :1 은 1bit만 사용한다.
 	UPROPERTY(BlueprintReadOnly, Category = "State", VisibleAnywhere)
 	uint8 bIsCrouched : 1;
 

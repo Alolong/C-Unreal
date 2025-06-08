@@ -33,6 +33,7 @@ AMyCharacter::AMyCharacter()
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera -> SetupAttachment(CameraBoom);
+	
 
 	// GetMesh()
 	// ->  다음거 해
@@ -44,7 +45,7 @@ AMyCharacter::AMyCharacter()
 	//무기
 	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
 	Weapon->SetupAttachment(GetMesh(), TEXT("hand_rSocket"));
-
+	
 }
 
 // Called when the game starts or when spawned
@@ -69,7 +70,7 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	
 	//캐릭터에 바인드
-	//PlayerInputComponent를 UEnhancedInputComponent로 캐스팅하여 사용
+	//PlayerInputComponent를 UEnhancedInputComponent로 캐스팅하여 사용 Cast<>()
 	//언리얼의 새로운 Enhanced Input System을 사용할 때는 UEnhancedInputComponent를 통해서 InputAction 바인딩을 해야 하기 때문에 이 캐스팅이 필요
 	UEnhancedInputComponent* UEIC = Cast<UEnhancedInputComponent>(PlayerInputComponent);
 
@@ -153,12 +154,13 @@ void AMyCharacter::OnLook(const FInputActionValue& value)
 void AMyCharacter::OnZoom(const FInputActionValue& value)
 {
 	//CameraBoom->TargetArmLength = FMath::FInterpTo(SpringArm->TargetArmLength, CameraBoom->TargetArmLength + Value.Get<float>() * -200.0f, UGameplayStatics::GetWorldDeltaSeconds(GetWorld()), 10.0f);
-
+	//중첩증가
 	CameraBoom->TargetArmLength += value.Get<float>() * -10.0f;
+	//clamp 최대값, 최소값 지정
 	CameraBoom->TargetArmLength = FMath::Clamp(CameraBoom->TargetArmLength,100.0f,
 		600.0f);
 }
-
+// ::는 구조체 내부의 함수 불러올떄 사용
 void AMyCharacter::OnJump(const FInputActionValue& value)
 {
 	Jump(); // 점프는 할 수 있는 함수가 있음

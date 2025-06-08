@@ -13,6 +13,8 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	//Pawn의 정보를 가져옴
 	Super::NativeUpdateAnimation(DeltaSeconds);
 
+	//애니 인스턴스가 바인딩된 폰을  AMyCharacter형 폰으로 가져온다. 
+	//TryGetPawnOwner는 애니메이션 인스턴스가 바인딩된 폰을 가져옴
 	AMyCharacter* Pawn = Cast<AMyCharacter>(TryGetPawnOwner());
 	if (IsValid(Pawn))
 	{
@@ -29,7 +31,9 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		bIsFire = Pawn->bIsFire;
 		bIsLeftLean = Pawn->bIsLeftLean;
 		bIsRightLean = Pawn->bIsRightLean;
-	//왼쪽 각도 설정
+	
+		
+		//왼쪽 각도 설정
 		if (bIsLeftLean)
 		{
 			TargetSpineAngle = -30.0f;
@@ -39,12 +43,14 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		{
 			TargetSpineAngle = 30.0f;
 		}
-		//둘다 아닌 경우
+		//둘다 아닌 경우 && and
 		if (!bIsRightLean && !bIsLeftLean)
 		{
 			TargetSpineAngle = 0.0f;
 		}
 
+
+		//
 		CurrentSpineAngle = FMath::FInterpTo(CurrentSpineAngle, TargetSpineAngle, DeltaSeconds, 8.0f);
 
 
