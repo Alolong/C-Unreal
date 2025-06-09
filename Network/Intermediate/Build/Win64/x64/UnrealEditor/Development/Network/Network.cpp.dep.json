@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\c-unreal\\network\\source\\network\\network.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\c-unreal\\network\\intermediate\\build\\win64\\x64\\networkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\c-unreal\\network\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\network\\definitions.network.h",
+            "c:\\c-unreal\\network\\source\\network\\network.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
