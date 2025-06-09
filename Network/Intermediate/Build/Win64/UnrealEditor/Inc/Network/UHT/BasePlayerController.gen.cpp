@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Network/BasePlayerController.h"
+#include "Network/Title/BasePlayerController.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBasePlayerController() {}
 
@@ -33,8 +33,8 @@ struct Z_Construct_UClass_ABasePlayerController_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Collision Rendering Transformation" },
-		{ "IncludePath", "BasePlayerController.h" },
-		{ "ModuleRelativePath", "BasePlayerController.h" },
+		{ "IncludePath", "Title/BasePlayerController.h" },
+		{ "ModuleRelativePath", "Title/BasePlayerController.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -81,14 +81,14 @@ ABasePlayerController::~ABasePlayerController() {}
 // End Class ABasePlayerController
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_BasePlayerController_h_Statics
+struct Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Title_BasePlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABasePlayerController, ABasePlayerController::StaticClass, TEXT("ABasePlayerController"), &Z_Registration_Info_UClass_ABasePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePlayerController), 1888096096U) },
+		{ Z_Construct_UClass_ABasePlayerController, ABasePlayerController::StaticClass, TEXT("ABasePlayerController"), &Z_Registration_Info_UClass_ABasePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePlayerController), 1504721310U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_BasePlayerController_h_4130119041(TEXT("/Script/Network"),
-	Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_BasePlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_BasePlayerController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Title_BasePlayerController_h_1867414884(TEXT("/Script/Network"),
+	Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Title_BasePlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Title_BasePlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

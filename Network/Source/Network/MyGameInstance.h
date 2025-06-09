@@ -7,7 +7,7 @@
 #include "MyGameInstance.generated.h"
 
 /**
- * 
+ * 유저 아이디를 저장하는 곳
  */
 UCLASS()
 class NETWORK_API UMyGameInstance : public UGameInstance

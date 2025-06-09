@@ -5,6 +5,10 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/C++/C++Unreal/Network/Content/BP/Title/BP_TitleCon.uasset",
+				"D:/C++/C++Unreal/Network/Content/TitleWorld.umap",
+				"D:/C++/C++Unreal/Network/Content/BP/Title/BP_Title.uasset",
+				"D:/C++/C++Unreal/Network/Content/BP/Title/BP_TitleGM.uasset",
 				"C:/C-Unreal/Network/Content/NewWorld.umap",
 				"C:/C-Unreal/Network/Content/BP/BP_GM.uasset",
 				"C:/C-Unreal/Network/Content/BP/BP_Con.uasset",

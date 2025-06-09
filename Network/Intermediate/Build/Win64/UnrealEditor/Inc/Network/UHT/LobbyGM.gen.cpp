@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Network/LobbyGM.h"
+#include "Network/Lobby/LobbyGM.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeLobbyGM() {}
 
@@ -33,8 +33,8 @@ struct Z_Construct_UClass_ALobbyGM_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "LobbyGM.h" },
-		{ "ModuleRelativePath", "LobbyGM.h" },
+		{ "IncludePath", "Lobby/LobbyGM.h" },
+		{ "ModuleRelativePath", "Lobby/LobbyGM.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif // WITH_METADATA
@@ -82,14 +82,14 @@ ALobbyGM::~ALobbyGM() {}
 // End Class ALobbyGM
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_LobbyGM_h_Statics
+struct Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALobbyGM, ALobbyGM::StaticClass, TEXT("ALobbyGM"), &Z_Registration_Info_UClass_ALobbyGM, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALobbyGM), 2565901031U) },
+		{ Z_Construct_UClass_ALobbyGM, ALobbyGM::StaticClass, TEXT("ALobbyGM"), &Z_Registration_Info_UClass_ALobbyGM, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALobbyGM), 1638521432U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_LobbyGM_h_142947670(TEXT("/Script/Network"),
-	Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_LobbyGM_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_LobbyGM_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_2774718638(TEXT("/Script/Network"),
+	Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

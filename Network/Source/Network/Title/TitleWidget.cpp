@@ -4,28 +4,34 @@
 #include "TitleWidget.h"
 #include "Components/EditableTextBox.h"
 #include "Components/Button.h"
-#include "../BasePlayerController.h"
+#include "basePlayerController.h"
 #include "../MyGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 
 
 
 
+	//시스템 위에 위젯 생성 될 시 사용하는 함수
+	/*이 함수 안에서:
+1.버튼이나 텍스트 같은 UI 위젯을 초기화하고,
 
+2.이벤트 바인딩을 하거나,
+
+3.변수를 설정하는 작업을 할 수 있습니다.*/
 void UTitleWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
 
 	//GetWidgetFromName(TEXT("UserIDText"))
 
+	//GetWidgetFromName :  위젯 이름 가져와서 캐스팅
+	UserIDText = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("UserID")));
+	PasswordText = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("Password")));
 
-	UserIDText = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("UserIDText")));
-
-	ServerIDText = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("ServerIDText")));
-	PasswordText = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("PasswordText")));
+	ServerIDText = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("ServerIP")));
 
 	StartServerButton = Cast<UButton>(GetWidgetFromName(TEXT("StartServerButton")));
-	ConnectButton = Cast<UButton>(GetWidgetFromName(TEXT("ConnectButton")));
+	ConnectButton = Cast<UButton>(GetWidgetFromName(TEXT("Connect")));
 
 
 	if (StartServerButton)
@@ -73,6 +79,8 @@ void UTitleWidget::OnClickConnectButton()
 
 void UTitleWidget::SaveUserId()
 {
+	//Cast<UMyGameInstance>(UGameplayStatics::GetGameInstance(GetWorld())) 반환한 월드인스턴스를 형변환
+	//GetWorld() -> 월드 반환
 	UMyGameInstance* GI = Cast<UMyGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 	if (GI && UserIDText)
 	{

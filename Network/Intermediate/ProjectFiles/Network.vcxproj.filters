@@ -30,12 +30,6 @@
     <Filter Include="Source\Network">
       <UniqueIdentifier>{6F35CF78-A7DD-3333-AA83-85C3F17A3400}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Network\LobbyGM.cpp">
-      <Filter>Source\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Network\LobbyGM.h">
-      <Filter>Source\Network</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Network\MyGameInstance.cpp">
       <Filter>Source\Network</Filter>
     </ClCompile>
@@ -50,6 +44,21 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Network\Network.h">
       <Filter>Source\Network</Filter>
+    </ClCompile>
+    <Filter Include="Source\Network\Lobby">
+      <UniqueIdentifier>{9566DA0D-0F5D-3A67-8976-84414E992012}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyGM.cpp">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyGM.h">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyPC.cpp">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyPC.h">
+      <Filter>Source\Network\Lobby</Filter>
     </ClCompile>
     <Filter Include="Source\Network\Title">
       <UniqueIdentifier>{9BBE9630-4342-3E4C-8B02-47429568C43F}</UniqueIdentifier>

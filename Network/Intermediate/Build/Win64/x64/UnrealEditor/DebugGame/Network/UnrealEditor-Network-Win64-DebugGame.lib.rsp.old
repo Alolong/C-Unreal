@@ -7,9 +7,13 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\NetworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
+"C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\BasePlayerController.gen.cpp.obj"
+"C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\LobbyGM.gen.cpp.obj"
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\MyGameInstance.gen.cpp.obj"
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\Network.init.gen.cpp.obj"
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\TitleWidget.gen.cpp.obj"
+"C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\BasePlayerController.cpp.obj"
+"C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\LobbyGM.cpp.obj"
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\MyGameInstance.cpp.obj"
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\Network.cpp.obj"
 "C:\C-Unreal\Network\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Network\TitleWidget.cpp.obj"
