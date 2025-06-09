@@ -41,8 +41,8 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 
-
-	//카메라
+	// TObjectPtr - 해당하는 기능을 설정하게 하는 칸을 만들어줌
+	// TObjectPtr<클래스타입> 변수명
 
 	UPROPERTY(VisibleAnywhere, Category="Components",BlueprintReadOnly)
 	TObjectPtr<USpringArmComponent> CameraBoom;
