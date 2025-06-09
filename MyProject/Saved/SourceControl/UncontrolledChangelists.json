@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/C++/C++Unreal/MyProject/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/ThirdPerson/Input/Actions/IA_Fire.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/ThirdPerson/Input/Actions/IA_LeftLean.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/ThirdPerson/Input/Actions/IA_RightLean.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/ThirdPerson/Input/Actions/IA_Relaod.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/BLuePrints/BP_MyChar.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/BLuePrints/TestChar.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/Animation/AniminstanceTest.uasset",
+				"D:/C++/C++Unreal/MyProject/Content/Animation/MyAnimNotify_PrintMessage.uasset"
+			]
+		}
+	]
+}
