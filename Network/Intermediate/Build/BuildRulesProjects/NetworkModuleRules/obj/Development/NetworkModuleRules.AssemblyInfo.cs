@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetworkModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e35ac707f8dfbea7b7b280e61069e7c17e65711")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e6fee59a1362199290557a049ebf5129912fdf0")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetworkModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetworkModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

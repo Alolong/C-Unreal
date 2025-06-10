@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\c-unreal\\network\\intermediate\\build\\win64\\unrealeditor\\inc\\network\\uht\\lobbygs.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\c-unreal\\network\\intermediate\\build\\win64\\x64\\networkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\c-unreal\\network\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\network\\definitions.network.h",
+            "c:\\c-unreal\\network\\source\\network\\lobby\\lobbygs.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamestatebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamestatebase.generated.h",
+            "c:\\c-unreal\\network\\intermediate\\build\\win64\\unrealeditor\\inc\\network\\uht\\lobbygs.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -14,7 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NETWORK_LobbyGM_generated_h
 
-#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDecreaseTime);
+
+
+#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesALobbyGM(); \
 	friend struct Z_Construct_UClass_ALobbyGM_Statics; \
@@ -23,7 +27,7 @@ public: \
 	DECLARE_SERIALIZER(ALobbyGM)
 
 
-#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ALobbyGM(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +41,13 @@ public: \
 	NO_API virtual ~ALobbyGM();
 
 
-#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_12_PROLOG
-#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_GENERATED_BODY \
+#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_12_PROLOG
+#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_INCLASS_NO_PURE_DECLS \
-	FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_ENHANCED_CONSTRUCTORS \
+	FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_INCLASS_NO_PURE_DECLS \
+	FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +55,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> NETWORK_API UClass* StaticClass<class ALobbyGM>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGM_h
+#define CURRENT_FILE_ID FID_C_Unreal_Network_Source_Network_Lobby_LobbyGM_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

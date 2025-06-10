@@ -54,10 +54,28 @@
     <ClCompile Include="..\..\Source\Network\Lobby\LobbyGM.h">
       <Filter>Source\Network\Lobby</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyGS.cpp">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyGS.h">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Network\Lobby\LobbyPC.cpp">
       <Filter>Source\Network\Lobby</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Network\Lobby\LobbyPC.h">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyPS.cpp">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyPS.h">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyWidget.cpp">
+      <Filter>Source\Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Network\Lobby\LobbyWidget.h">
       <Filter>Source\Network\Lobby</Filter>
     </ClCompile>
     <Filter Include="Source\Network\Title">
