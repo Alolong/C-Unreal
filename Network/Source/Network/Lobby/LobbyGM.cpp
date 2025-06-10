@@ -102,7 +102,7 @@ void ALobbyGM::DecreaseTime()
 
 }
 
-void ALobbyGM::StarGame()
+void ALobbyGM::StartGame()
 {
 	GetWorld()->ServerTravel(TEXT("InGame"));
 }

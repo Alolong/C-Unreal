@@ -19,7 +19,7 @@ class UEditableTextBox;
 *	
 * 2. 위젯에 필요한 함수들
 *	1. 위젯 보이게
-*	2. 채팅 엔터
+*	2. 채팅 엔터 - 플레이어 컨트롤러에서 서버 통신
 *	3. 시작 기능(시작버튼)
 *	4. 메세지 작성기능
  * 
@@ -59,7 +59,8 @@ public:
 	void EnterChat();
 
 	UFUNCTION()
-	void OnChangedEvent(const FText& Text);
+	void OnChangedEvent(const FText& Text);	//텍스트 작성
+
 
 	UFUNCTION()
 	// 엔터를 쳤는가
@@ -67,7 +68,6 @@ public:
 
 
 	void ShowStartButton();
-
 
 
 	void AddMessage(const FText& Text);
