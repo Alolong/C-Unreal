@@ -1,0 +1,41 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/C-Unreal/SimpleMultiGame/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/BP_NameTagComponent.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/NameTagWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/NameTagObjectWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/Shooting/Nametag/NameTagObjectWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/Shooting/Nametag/NameTagWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/Shooting/Nametag/BP_NameTagComponent.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/ThirdPerson/Blueprints/BP_MultiChar.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_MultiChar.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_Item.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/HudWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/O0/Z0PJFR16PYVZAQ9IOXJ3FU.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_Hud.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_PlayerState.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_Spawner.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/CC/MZVCVEDRBL2NR7WA8SLN08.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/3/G7/GKZB1GZBDVBC1XNCZJ84DO.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/2A/FD8U0EADO0I68QQ5SK74OL.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/DC/C987X73ZHOPK0NLXKXMF8B.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/0/PD/6A3BEXMC588GFMXZF67OQY.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/2/UQ/WH4STWEEKTD7OG9AX12CSR.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/XX/S0PYOL9L57CFSLACQ6ICB5.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/2/TM/UVPOR3KDJKE1X0NJOU61FV.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/4/LW/53YSQHHZJ6F1WM9WSJNXZ3.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/L4/B3CD7ZGJ942M0N4GM6024I.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/3D/AFRVXU4IS4TOHVLJYOWA9E.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/9/4E/2KWTW81N3WXFN41WJFSCKU.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/G1/6JUQ7OSKEHYBYQ481ZHCGJ.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_GS.uasset"
+			]
+		}
+	]
+}
