@@ -1,43 +1,43 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "LobbyGS.h"
 #include "Net/UnrealNetwork.h"
-#include "LobbyPC.h"
 #include "Kismet/GameplayStatics.h"
+#include "LobbyPC.h"
 #include "LobbyWidget.h"
 #include "Components/TextBlock.h"
 
-//ÃÊ ¼¼´Â ±â´É 
-//1. ÇÃ·¹ÀÌ¾îÄÁÆ®·Ñ·¯ Çüº¯È¯-> PC·Î
-//2. LeftTime- À§Á¬¿¡ ¿¬°áÇÏ±â
+//ì´ˆ ì„¸ëŠ” ê¸°ëŠ¥ 
+//1. í”Œë ˆì´ì–´ì»¨íŠ¸ë¡¤ëŸ¬ í˜•ë³€í™˜-> PCë¡œ
+//2. LeftTime- ìœ„ì ¯ì— ì—°ê²°í•˜ê¸°
 
 void ALobbyGS::OnRep_LeftTime()
 {
 	ALobbyPC* PC = Cast<ALobbyPC>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 	if (PC)
 	{
-		//LeftTimeÀ» FStringÇü Temp·Î ´Ü¼øÈ­
-		FString Temp = FString::Printf(TEXT("%dÃÊ ³²À½"), LeftTime);
+		//LeftTimeì„ FStringí˜• Tempë¡œ ë‹¨ìˆœí™”
+		FString Temp = FString::Printf(TEXT("%dì´ˆ ë‚¨ìŒ"), LeftTime);
 		if (PC->WidgetObject)
 		{
-			//#include "Components/TextBlock.h" ÇÊ¿ä(SetTextÇÔ¼ö)
-			//À§Á¬¿ÀºêÁ§Æ®ÀÇ ÅØ½ºÆ®¹Ú½ºÀÇ ÅØ½ºÆ®¸¦ Temp·Î ³ªÅ¸³¿
+			//#include "Components/TextBlock.h" í•„ìš”(SetTextí•¨ìˆ˜)
+			//ìœ„ì ¯ì˜¤ë¸Œì íŠ¸ì˜ í…ìŠ¤íŠ¸ë°•ìŠ¤ì˜ í…ìŠ¤íŠ¸ë¥¼ Tempë¡œ ë‚˜íƒ€ëƒ„
 			PC->WidgetObject->LeftTimeText->SetText(FText::FromString(Temp));
 		}
 	}
 }
 
-//Á¢¼Ó Ä«¿îÆ®¼¼±â
-//1. ÇÃ·¹ÀÌ¾îÄÁÆ®·Ñ·¯ Çüº¯È¯-> PC·Î
-//2. ConnectCount - À§Á¬¿¡ ¿¬°áÇÏ±â
+//ì ‘ì† ì¹´ìš´íŠ¸ì„¸ê¸°
+//1. í”Œë ˆì´ì–´ì»¨íŠ¸ë¡¤ëŸ¬ í˜•ë³€í™˜-> PCë¡œ
+//2. ConnectCount - ìœ„ì ¯ì— ì—°ê²°í•˜ê¸°
 void ALobbyGS::OnRep_ConnectCount()
 {
 	ALobbyPC* PC = Cast<ALobbyPC>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 
 	if (PC)
-	{
-		FString Temp = FString::Printf(TEXT("%d¸í Á¢¼Ó"), ConnectCount);
+	{	
+		FString Temp = FString::Printf(TEXT("%dëª… ì ‘ì†"), ConnectCount);
 		if (PC->WidgetObject)
 		{
 			PC->WidgetObject->ConnectCountText->SetText(FText::FromString(Temp));
@@ -50,7 +50,7 @@ void ALobbyGS::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetime
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	//DOREPLIFETIME includeÀÇ NetÂÊ¿¡ ÀÖÀ½
+	//DOREPLIFETIME includeì˜ Netìª½ì— ìˆìŒ
 	DOREPLIFETIME(ALobbyGS, LeftTime);
 	DOREPLIFETIME(ALobbyGS, ConnectCount);
 }

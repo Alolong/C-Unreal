@@ -232,14 +232,14 @@ ALobbyPC::~ALobbyPC() {}
 // End Class ALobbyPC
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_Lobby_LobbyPC_h_Statics
+struct Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyPC_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ALobbyPC, ALobbyPC::StaticClass, TEXT("ALobbyPC"), &Z_Registration_Info_UClass_ALobbyPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALobbyPC), 2299900811U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_Lobby_LobbyPC_h_3112000575(TEXT("/Script/Network"),
-	Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_Lobby_LobbyPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C_Unreal_Network_Source_Network_Lobby_LobbyPC_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyPC_h_3112000575(TEXT("/Script/Network"),
+	Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyPC_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

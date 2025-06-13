@@ -14,12 +14,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NETWORK_LobbyGS_generated_h
 
-#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnRep_ConnectCount); \
 	DECLARE_FUNCTION(execOnRep_LeftTime);
 
 
-#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesALobbyGS(); \
 	friend struct Z_Construct_UClass_ALobbyGS_Statics; \
@@ -35,7 +35,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ALobbyGS(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -49,13 +49,13 @@ public: \
 	NO_API virtual ~ALobbyGS();
 
 
-#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_14_PROLOG
-#define FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_GENERATED_BODY \
+#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_14_PROLOG
+#define FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_INCLASS_NO_PURE_DECLS \
-	FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_ENHANCED_CONSTRUCTORS \
+	FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_INCLASS_NO_PURE_DECLS \
+	FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,7 +63,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> NETWORK_API UClass* StaticClass<class ALobbyGS>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_C_Unreal_Network_Source_Network_Lobby_LobbyGS_h
+#define CURRENT_FILE_ID FID_C___C__Unreal_Network_Source_Network_Lobby_LobbyGS_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

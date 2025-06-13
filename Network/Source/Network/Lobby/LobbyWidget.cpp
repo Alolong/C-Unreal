@@ -10,6 +10,7 @@
 #include "LobbyPC.h"
 #include "LobbyGS.h"
 #include "LobbyGM.h"
+//Nativeconstruct: 위젯이 생성(구성)될 때 호출됩니다. 초기화 로직 작성에 사용. BeginPlay와 유사.
 
 void ULobbyWidget::NativeConstruct()
 {
@@ -32,9 +33,15 @@ void ULobbyWidget::NativeConstruct()
 		ChatInput->OnTextCommitted.AddDynamic(this, &ULobbyWidget::OnCommitEvent);
 	}
 }
-
+//스타트 게임 버튼의 함수
+//게임모드 형변환 ->게임 스타트 함수 실행
 void ULobbyWidget::Start()
 {
+	ALobbyGM* GM = Cast<ALobbyGM>(UGameplayStatics::GetGameMode(GetWorld()));
+	if (GM)
+	{
+		GM->StartGame();
+	}
 }
 
 void ULobbyWidget::EnterChat()
@@ -46,9 +53,10 @@ void ULobbyWidget::EnterChat()
 	}
 }
 
+//연구 필요 텍스트 작성
 void ULobbyWidget::OnChangedEvent(const FText& Text)
 {
-	FString Temp = Text.ToString();
+	FString Temp = Text.ToString();//변수에 함수 대입
 
 	Temp = Temp.Replace(TEXT("바보"), TEXT("**"));
 
@@ -61,7 +69,7 @@ void ULobbyWidget::OnCommitEvent(const FText& Text, ETextCommit::Type CommitMeth
 {
 	switch (CommitMethod)
 	{
-	case ETextCommit::OnEnter:
+	case ETextCommit::OnEnter: //Enum 엔터 눌렀을시
 	{
 		ALobbyPC* PC = Cast<ALobbyPC>(GetOwningPlayer());
 		if (PC)
@@ -77,7 +85,7 @@ void ULobbyWidget::OnCommitEvent(const FText& Text, ETextCommit::Type CommitMeth
 	}
 }
 
-
+//시작버튼 보이기
 void ULobbyWidget::ShowStartButton()
 {
 	if (StartButton)
