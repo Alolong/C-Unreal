@@ -5,6 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/C++/C++Unreal/SimpleMultiGame/Content/MultiGame/BP_Hud.uasset",
+				"D:/C++/C++Unreal/SimpleMultiGame/Content/MultiGame/Nametag/BP_NameTagComponent.uasset",
+				"D:/C++/C++Unreal/SimpleMultiGame/Content/MultiGame/Nametag/NameTagWidget.uasset",
+				"D:/C++/C++Unreal/SimpleMultiGame/Content/MultiGame/BP_Item.uasset",
+				"D:/C++/C++Unreal/SimpleMultiGame/Content/MultiGame/Nametag/NameTagObjectWidget.uasset",
 				"C:/C-Unreal/SimpleMultiGame/Content/StarterContent/Architecture/Floor_400x400.uasset",
 				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/BP_NameTagComponent.uasset",
 				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/NameTagWidget.uasset",
