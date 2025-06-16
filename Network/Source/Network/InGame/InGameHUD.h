@@ -23,6 +23,7 @@ public:
 
 	int8 bShowHeight : 1;
 
+	//Exec은 디버깅용인듯
 	UFUNCTION(Exec)
 	void ShowHeight();
 

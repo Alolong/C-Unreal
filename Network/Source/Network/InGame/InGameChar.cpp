@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "InGameChar.h"
@@ -6,6 +6,12 @@
 #include "EnhancedInputComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Engine/DamageEvents.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "InGame/InGamePC.h"
+
+
 // Sets default values
 AInGameChar::AInGameChar()
 {
@@ -29,7 +35,7 @@ void AInGameChar::Tick(float DeltaTime)
 }
 
 // Called to bind functionality to input
-//ÀÎÇ² ¹ÙÀÎµù¿ëµµ
+//ì¸í’‹ ë°”ì¸ë”©ìš©ë„
 void AInGameChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -37,7 +43,7 @@ void AInGameChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	UEnhancedInputComponent* UIC = Cast<UEnhancedInputComponent>(PlayerInputComponent);
 	if (IsValid(UIC))
 	{
-		//bindaction - (Å°ÀÌ¸§ , Æ®¸®°Å ÀÌº¥Æ® ,¹ÙÀÎµù ÇÒ °÷, ¹ÙÀÎµùÇÒ ÇÔ¼ö±â´É)
+		//bindaction - (í‚¤ì´ë¦„ , íŠ¸ë¦¬ê±° ì´ë²¤íŠ¸ ,ë°”ì¸ë”© í•  ê³³, ë°”ì¸ë”©í•  í•¨ìˆ˜ê¸°ëŠ¥)
 		UIC->BindAction(FireInput, ETriggerEvent::Completed, this, &AInGameChar::OnFire);
 	}
 
@@ -57,7 +63,7 @@ void AInGameChar::OnFire()
 		FRotator CameraRotation;
 		PC->GetViewportSize(SizeX, SizeY);
 		PC->GetPlayerViewPoint(CameraLocation, CameraRotation);
-		//Deproject -> È­¸é ÁÂÇ¥¸¦ 3dÁÂÇ¥·Î
+		//Deproject -> í™”ë©´ ì¢Œí‘œë¥¼ 3dì¢Œí‘œë¡œ
 		PC->DeprojectScreenPositionToWorld(SizeX / 2.0f,
 			SizeY / 2.0f,
 			WorldPosition,
@@ -71,18 +77,18 @@ void AInGameChar::OnFire()
 		C2S_Fire(SpawnPosition, SpawnRotation);
 	}
 }
-//Å¬¶ó¿¡¼­ ¼­¹ö·Î ÀÎÁõ ÁøÇà
+//í´ë¼ì—ì„œ ì„œë²„ë¡œ ì¸ì¦ ì§„í–‰
 bool AInGameChar::C2S_Fire_Validate(const FVector& SpawnPosition, const FRotator& SpawnRotation)
 {
 	return true;
 }
-//Å¬¶ó¿¡¼­ ¼­¹ö·Î ½ÇÇà ½ÂÀÎ
+//í´ë¼ì—ì„œ ì„œë²„ë¡œ ì‹¤í–‰ ìŠ¹ì¸
 void AInGameChar::C2S_Fire_Implementation(const FVector& SpawnPosition, const FRotator& SpawnRotation)
 {
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
-	//¹è¿­ ¿ùµå´ÙÀÌ³ª¹ÍÀ» ¹è¿­¿¡ ´õÇÏ±â ECC´Â EnumÇü
+	//ë°°ì—´ ì›”ë“œë‹¤ì´ë‚˜ë¯¹ì„ ë°°ì—´ì— ë”í•˜ê¸° ECCëŠ” Enumí˜•
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_WorldDynamic));
 
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_WorldStatic));
@@ -107,7 +113,57 @@ void AInGameChar::C2S_Fire_Implementation(const FVector& SpawnPosition, const FR
 		FLinearColor::Green,
 		2.0f
 	);
+	
+	/*
+	if (bResult)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Hit %s"), *OutHit.GetActor()->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("Bone %s"), *OutHit.BoneName.ToString());
 
+		//UGameplayStatics::ApplyDamage(OutHit.GetActor(),
+		//	100.0f,
+		//	GetController(),
+		//	this, 
+		//	UBulletDamage::StaticClass()
+		//);
+
+		UGameplayStatics::ApplyPointDamage(
+			OutHit.GetActor(),
+			100.0f,
+			SpawnRotation.Vector(),
+			OutHit,
+			GetController(),
+			this,
+			UBulletDamage::StaticClass()
+		);
+		*/
+
+
+		//UGameplayStatics::ApplyRadialDamage(
+		//	GetWorld(),
+		//	100.0f,
+		//	OutHit.ImpactPoint,
+		//	300.0f,
+		//	UBulletDamage::StaticClass(),
+		//	IgnoreActor,
+		//	this,
+		//	GetController()
+		//);
+
+		//UGameplayStatics::ApplyRadialDamageWithFalloff(
+		//	GetWorld(),
+		//	100.0f,
+		//	10.0f,
+		//	OutHit.ImpactPoint,
+		//	300.0f,
+		//	600.0f,
+		//	10.0f,
+		//	UBulletDamage::StaticClass(),
+		//	IgnoreActor,
+		//	this,
+		//	GetController()
+		//);
+	}
 
 
 
@@ -119,12 +175,56 @@ void AInGameChar::C2S_Fire_Implementation(const FVector& SpawnPosition, const FR
 
 void AInGameChar::S2A_Dead_Implementation(const FVector& ImpulseDirection)
 {
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GetMesh()->SetSimulatePhysics(true);
+	GetMesh()->AddImpulse(ImpulseDirection * 100000.0f, FName(TEXT("head")));
+
+	APlayerController* PC = Cast<APlayerController>(GetController());
+	if (PC)
+	{
+		PC->DisableInput(PC);
+	}
 }
 
 
-//µ¥¹ÌÁö ¹ŞÀ½
+//ë°ë¯¸ì§€ ë°›ìŒ
 float AInGameChar::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
-{
+{ 
+	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	
+	if (DamageEvent.IsOfType(FPointDamageEvent::ClassID))
+	{
+		FPointDamageEvent* PointDamageEvent = (FPointDamageEvent*)&DamageEvent;
+		if (PointDamageEvent->DamageTypeClass == UBulletDamage::StaticClass())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("FPointDamageEvent %f %s"), DamageAmount, *PointDamageEvent->HitInfo.BoneName.ToString());
+
+			if (PointDamageEvent->HitInfo.BoneName.ToString().Compare(TEXT("head")) == 0)
+			{
+				S2A_Dead(-PointDamageEvent->HitInfo.ImpactNormal);
+			}
+		}
+	}
+	else if (DamageEvent.IsOfType(FRadialDamageEvent::ClassID))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("FRadialDamageEvent %f"), DamageAmount);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("DamageAmount %f"), DamageAmount);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	return 0.0f;
 }
 

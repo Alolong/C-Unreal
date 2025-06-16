@@ -9,7 +9,7 @@
 /**
  * 
  */
-class UUserWidget;
+class UInputAction;
 
 
 UCLASS()
@@ -20,14 +20,22 @@ public:
 	
 	virtual void BeginPlay() override;
 
+	UPROPERTY(BlueprintReadWrite, Category = "UI",EditAnywhere)
+	TObjectPtr <UUserWidget> InventoryWidget;
+	UPROPERTY(BlueprintReadWrite, Category = "UI", EditAnywhere)
+	TObjectPtr <UUserWidget> InventoryTemplate;
 
 	UFUNCTION()
-	void ShowInventory(bool bshow);
+	void ShowInventory(bool bShow);
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
+	uint32 bShowInventory : 1;
 
+	UPROPERTY(EditAnywhere, Category = "Input", BlueprintReadWrite)
+	TObjectPtr<UInputAction> InventoryInput;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Widget",EditAnywhere)
-	TObjectPtr <UUserWidget> InventoryWidget;
-	UPROPERTY(BlueprintReadWrite, Category = "Widget", EditAnywhere)
-	TObjectPtr <UUserWidget> InventoryTemplate;
+	void SwitchInventory();
+
+	virtual void SetupInputComponent() override;
+
 };

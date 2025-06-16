@@ -1,0 +1,40 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Network.cpp.obj": [
+			"InGameGC.cpp.obj",
+			"InGameGM.cpp.obj",
+			"InGameGS.cpp.obj",
+			"InGamePS.cpp.obj",
+			"LobbyGM.cpp.obj",
+			"LobbyGS.cpp.obj",
+			"LobbyPC.cpp.obj",
+			"LobbyPS.cpp.obj",
+			"LobbyWidget.cpp.obj",
+			"MyGameInstance.cpp.obj",
+			"Network.cpp.obj",
+			"BasePlayerController.cpp.obj",
+			"TitleWidget.cpp.obj",
+			"BasePlayerController.gen.cpp.obj",
+			"InGameChar.gen.cpp.obj",
+			"InGameGC.gen.cpp.obj",
+			"InGameGM.gen.cpp.obj",
+			"InGameGS.gen.cpp.obj",
+			"InGameHUD.gen.cpp.obj",
+			"InGamePC.gen.cpp.obj",
+			"InGamePS.gen.cpp.obj",
+			"LobbyGM.gen.cpp.obj",
+			"LobbyGS.gen.cpp.obj",
+			"LobbyPC.gen.cpp.obj",
+			"LobbyPS.gen.cpp.obj",
+			"LobbyWidget.gen.cpp.obj",
+			"MyGameInstance.gen.cpp.obj",
+			"Network.init.gen.cpp.obj",
+			"TitleWidget.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"InGameChar.cpp.obj",
+			"InGameHUD.cpp.obj",
+			"InGamePC.cpp.obj"
+		]
+	}
+}
