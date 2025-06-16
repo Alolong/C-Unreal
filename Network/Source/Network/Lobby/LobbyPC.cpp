@@ -48,6 +48,10 @@ void ALobbyPC::BeginPlay()
 
 
 
+void ALobbyPC::C2S_SendMessage(const FText& Message)
+{
+}
+
 bool ALobbyPC::C2S_SendMessage_Validate( FText const& Message)
 {
 
