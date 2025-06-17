@@ -11,11 +11,12 @@ using namespace std;
 
 int main ()
 {
-	//dll init
+	//dll init winsock의 초기화 - WSAData
+	//주로 요청 버전
 	WSAData wsaData;
 
 	// 초기 예외 처리 
-	//MAKEWORD- 2바이트2바이트 쪼개 봄.//윈도우 전용
+	//MAKEWORD- 2바이트2바이트 쪼개 봄.//윈도우 전용헤더 minwindef.h인데 winSock2포함하면 간접적으로 포함됨
 	int Result = WSAStartup(MAKEWORD(2, 2), &wsaData);//초기화
 	
 	if (Result != 0)
