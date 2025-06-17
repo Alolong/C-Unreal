@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\cording\C++Pro\socket\main.cpp(44,6): error C2374: 'Result': redefinition; multiple initialization
+C:\cording\C++Pro\socket\main.cpp(18,6): message : see declaration of 'Result'
+C:\cording\C++Pro\socket\main.cpp(56,6): error C2374: 'Result': redefinition; multiple initialization
+C:\cording\C++Pro\socket\main.cpp(18,6): message : see declaration of 'Result'
+C:\cording\C++Pro\socket\main.cpp(82,37): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
