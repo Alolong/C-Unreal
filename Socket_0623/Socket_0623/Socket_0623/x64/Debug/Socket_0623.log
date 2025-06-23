@@ -1,0 +1,3 @@
+﻿  Main.cpp
+C:\C-Unreal\Socket_0623\Socket_0623\Main.cpp(60,30): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Socket_0623.vcxproj -> C:\C-Unreal\Socket_0623\Socket_0623\x64\Debug\Socket_0623.exe

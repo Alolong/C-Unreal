@@ -1,0 +1,24 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/C-Unreal/SimpleMultiGame/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_Hud.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_MultiChar.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_GS.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/HudWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_PlayerState.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/BP_NameTagComponent.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/Nametag/NameTagWidget.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_Item.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/EN_GS.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/ThirdPerson/Maps/ThirdPersonMap.umap",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/BP_GM.uasset",
+				"C:/C-Unreal/SimpleMultiGame/Content/MultiGame/EN_GameResult.uasset"
+			]
+		}
+	]
+}
