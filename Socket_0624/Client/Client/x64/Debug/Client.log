@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\C-Unreal\Socket_0624\Client\Source.cpp(32,36): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Client.vcxproj -> C:\C-Unreal\Socket_0624\Client\x64\Debug\Client.exe
