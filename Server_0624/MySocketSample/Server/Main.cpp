@@ -1,8 +1,20 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define NOMINMAX//winsock의 MONMAX 안씀-> rapidjson의 것과 중복 방지
+
 #include <iostream>
 #include <WinSock2.h>
+#include <Windows.h>//winsock보다 아래로
+
 #include "Packet.h"
+#include "rapidjson/document.h"
+#include "rapidjson/stringbuffer.h"
+#include "flatbuffers/flatbuffers.h"
+#include "Calculate_generated.h"
+
 #pragma comment(lib,"ws2_32")
+
+using namespace std;
+using namespace rapidjson;
 
 
 ///
@@ -12,6 +24,9 @@
 
 int main()
 {
+	////////////////////////////////////////////////////
+
+
 	WSAData wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
 
@@ -199,4 +214,22 @@ int main()
 
 	return  0;
 
+}
+int ProcessPacket(Document& d)
+{
+	switch (d["Operator"].GetInt())
+	{
+	case '+':
+		return d["Number1"].GetInt() + d["Number2"].GetInt();
+	case '-':
+		return d["Number1"].GetInt() - d["Number2"].GetInt();
+	case '/':
+		return d["Number1"].GetInt() / d["Number2"].GetInt();
+	case '*':
+		return d["Number1"].GetInt() * d["Number2"].GetInt();
+	case '%':
+		return d["Number1"].GetInt() % d["Number2"].GetInt();
+	}
+
+	return 0;
 }

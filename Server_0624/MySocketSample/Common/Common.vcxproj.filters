@@ -19,4 +19,8 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Calculate.fbs" />
+    <None Include="Result.fbs" />
+  </ItemGroup>
 </Project>

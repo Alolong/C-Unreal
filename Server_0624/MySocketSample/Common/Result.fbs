@@ -1,0 +1,7 @@
+namspace Calculate;
+
+total Result{
+result_number:int;
+}
+
+root_type Resutl;
