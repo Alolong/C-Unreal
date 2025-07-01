@@ -1,0 +1,61 @@
+namespace UserEvents;
+struct Color{
+r: uint8;
+g: uint8;
+b: uint8;
+
+}
+
+
+
+table C2S_Login{
+	username : string;
+	password : string;
+}
+
+table S2C_Login{
+success: bool;
+message: string;
+}
+
+table C2S_PlayerMoveData{
+	player_id: uint32;
+	position_x: uint16;
+	position_y: uint16;
+	color: Color;
+}
+
+table 	S2C_PlayerMoveData{
+	player_id: uint32;
+	position_x: uint16;
+	position_y: uint16;
+	key_code: uint8;
+}
+
+table C2S_Logout
+{
+}
+
+
+table S2C_Logout
+{
+}
+
+
+union Event Type {
+	C2S_Login,// 새로운데이터 타입
+	S2C_Login,
+	C2S_PlayerMoveData,
+	S2C_PlayerMoveData,
+	C2S_Logout,
+	S2C_Logout,
+}
+
+
+
+table EventData {
+timestamp : uint64;
+data_type : EventType; // 이벤트 데이터- 다른 패킷 하나씩
+}
+
+root_type EvnetData;
