@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Session",
+			"Path": "..\\Source\\Session.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SessionEditor",
+			"Path": "..\\Source\\SessionEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Session.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\SessionEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\MyGameInstance.gen.cpp.obj"
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\Session.init.gen.cpp.obj"
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\MyGameInstance.cpp.obj"
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\Session.cpp.obj"
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\PerModuleInline.gen.cpp.obj"
+"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\Default.rc2.res"
+/OUT:"C:\BluePrint\Session\Session\Intermediate\Build\Win64\x64\UnrealEditor\Development\Session\UnrealEditor-Session.lib"

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Session.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Session.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SessionEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Session">
+      <UniqueIdentifier>{A84D62E0-8CE6-3C20-BD05-B0B6F7089C82}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Session\MyGameInstance.cpp">
+      <Filter>Source\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Session\MyGameInstance.h">
+      <Filter>Source\Session</Filter>
+    </ClCompile>
+    <None Include="..\..\Source\Session\Session.Build.cs">
+      <Filter>Source\Session</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Session\Session.cpp">
+      <Filter>Source\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Session\Session.h">
+      <Filter>Source\Session</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
