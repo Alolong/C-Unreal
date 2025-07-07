@@ -8,7 +8,13 @@
 //인스턴스, 생성자 
 UMyGameInstance::UMyGameInstance(const FObjectInitializer& ObjectInitializer)
 {
-
+	//실행되는 순서
+	//1. hostsession
+	//2. create session
+	//3. start on ssession
+	//4.find
+	//5.join
+	//6,destroy
 	/** Bind function for Create Session*/
 	OnCreateSessionCompleteDelegate = FOnCreateSessionCompleteDelegate::CreateUObject(this, &UMyGameInstance::OnCreateSessionComplete);
 	OnStartSessionCompleteDelegate = FOnStartSessionCompleteDelegate::CreateUObject(this, &UMyGameInstance::OnStartOnlineGameComplete);
@@ -59,7 +65,8 @@ bool UMyGameInstance::HostSession(TSharedPtr<const FUniqueNetId> UserId, FName S
 			//ViaOnlineServiceAndPing 세션 리스트에 노출할 데이터 (방,맵,이름) ->검색용
 			SessionSettings->Set(FName("SESSION_NAME"), SessionName.ToString(), EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
 
-			SessionSettings->Set(SETTING_MAPNAME, FString("NewMap"), EOnlineDataAdvertisementType::ViaOnlineService);
+			//Join할 맵 이름을 넣어야함
+			SessionSettings->Set(SETTING_MAPNAME, FString("ThirdPersonMap"), EOnlineDataAdvertisementType::ViaOnlineService);
 
 			// Set the delegate to the Handle of the SessionInterface
 			OnCreateSessionCompleteDelegateHandle = Sessions->AddOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegate);
@@ -76,7 +83,7 @@ bool UMyGameInstance::HostSession(TSharedPtr<const FUniqueNetId> UserId, FName S
 	return false;
 }
 //세션 컴플리트 - 이벤트를 받는 부분
-
+//valid한지 체크하고 이동, 바인드 -> OnStartOnlineCompelete로 바이늗
 void UMyGameInstance::OnCreateSessionComplete(FName SessionName, bool bWasSuccessful)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, FString::Printf(TEXT("OnCreateSessionComplete %s, %d"), *SessionName.ToString(), bWasSuccessful));
@@ -126,7 +133,8 @@ void UMyGameInstance::OnStartOnlineGameComplete(FName SessionName, bool bWasSucc
 	// If the start was successful, we can open a NewMap if we want. Make sure to use "listen" as a parameter!
 	if (bWasSuccessful)
 	{
-		UGameplayStatics::OpenLevel(GetWorld(), "NewMap", true, "listen");
+		//Open하려는 레벨이름 넣기
+		UGameplayStatics::OpenLevel(GetWorld(), "ThirdPersonMap", true, "listen");
 	}
 }
 
@@ -195,6 +203,9 @@ void UMyGameInstance::OnFindSessionsComplete(bool bWasSuccessful)
 			// If we have found at least 1 session, we just going to debug them. You could add them to a list of UMG Widgets, like it is done in the BP version!
 			if (SessionSearch->SearchResults.Num() > 0)
 			{
+				TArray<FBlueprintSessionResult>arrResult;
+
+				arrResult.SetNum(SessionSearch->SearchResults.Num());
 				// "SessionSearch->SearchResults" is an Array that contains all the information. You can access the Session in this and get a lot of information.
 				// This can be customized later on with your own classes to add more information that can be set and displayed
 				for (int32 SearchIdx = 0; SearchIdx < SessionSearch->SearchResults.Num(); SearchIdx++)
@@ -202,7 +213,12 @@ void UMyGameInstance::OnFindSessionsComplete(bool bWasSuccessful)
 					// OwningUserName is just the SessionName for now. I guess you can create your own Host Settings class and GameSession Class and add a proper GameServer Name here.
 					// This is something you can't do in Blueprint for example!
 					GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, FString::Printf(TEXT("Session Number: %d | Sessionname: %s "), SearchIdx + 1, *(SessionSearch->SearchResults[SearchIdx].Session.OwningUserName)));
+
+					arrResult[SearchIdx].OnlineResult = SessionSearch->SearchResults[SearchIdx];
+
+
 				}
+				OnFindSessionResult(arrResult);
 			}
 		}
 	}
@@ -267,9 +283,19 @@ void UMyGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionCom
 
 			if (PlayerController && Sessions->GetResolvedConnectString(SessionName, TravelURL))
 			{
+				FString strIp, strPort;
+				int32 nPort = 7777;
+
+				TravelURL.Split(TEXT(":"), &strIp, &strPort, ESearchCase::IgnoreCase, ESearchDir::FromStart);
+
+				FString NewTravelURL = FString::Printf(TEXT("%s:%d"), *strIp, nPort);
+
+
+				GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, FString::Printf(TEXT("TravelURL= %s"), *NewTravelURL));
+
 				// Finally call the ClienTravel. If you want, you could print the TravelURL to see
 				// how it really looks like
-				PlayerController->ClientTravel(TravelURL, ETravelType::TRAVEL_Absolute);
+				PlayerController->ClientTravel(NewTravelURL, ETravelType::TRAVEL_Absolute);
 			}
 		}
 	}
@@ -311,7 +337,7 @@ void UMyGameInstance::OnDestroySessionComplete(FName SessionName, bool bWasSucce
 
 void UMyGameInstance::StartOnlineGame(FName SessionName)
 {
-	
+
 	// Creating a local player where we can get the UserID from
 	ULocalPlayer* const Player = GetFirstGamePlayer();
 	if (nullptr == Player)
@@ -371,7 +397,7 @@ void UMyGameInstance::JoinOnlineGame(FBlueprintSessionResult SessionResult)
 
 	// 중요 부분 sessionsettings 에 정보가 담긴다.
 	FString SessionName;
-		if (false ==SessionResult.OnlineResult.Session.SessionSettings.Get(FName("SESSION_NAME"),SessionName))
+	if (false == SessionResult.OnlineResult.Session.SessionSettings.Get(FName("SESSION_NAME"), SessionName))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, FString::Printf(TEXT("Cant find SessionName")));
 		return;
@@ -379,7 +405,7 @@ void UMyGameInstance::JoinOnlineGame(FBlueprintSessionResult SessionResult)
 
 	JoinSession(UniqueNetId, GameSessionName, SessionResult.OnlineResult);
 
-	
+
 }
 
 void UMyGameInstance::DestroySessionAndLeaveGame()
@@ -397,4 +423,10 @@ void UMyGameInstance::DestroySessionAndLeaveGame()
 			Sessions->DestroySession(GameSessionName);
 		}
 	}
+}
+
+void UMyGameInstance::OnFindSessionResult_Inpelementation(const TArray<FBlueprintSessionResult>& SessionResult)
+{
+	//부모에서의 실행될 시 이 코드가 실행
+
 }

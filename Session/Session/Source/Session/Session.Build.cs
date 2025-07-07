@@ -10,9 +10,6 @@ public class Session : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "OnlineSubsystem", "OnlineSubsystemUtils" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
-
-
         DynamicallyLoadedModuleNames.Add("OnlineSubsystemNull");
 
         // Uncomment if you are using Slate UI

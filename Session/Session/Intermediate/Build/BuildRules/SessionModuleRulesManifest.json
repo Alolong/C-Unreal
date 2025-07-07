@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\BluePrint\\Session\\Session\\Source\\Session\\Session.Build.cs",
-		"C:\\BluePrint\\Session\\Session\\Source\\Session.Target.cs",
-		"C:\\BluePrint\\Session\\Session\\Source\\SessionEditor.Target.cs"
+		"C:\\C-Unreal\\Session\\Session\\Source\\Session\\Session.Build.cs",
+		"C:\\C-Unreal\\Session\\Session\\Source\\Session.Target.cs",
+		"C:\\C-Unreal\\Session\\Session\\Source\\SessionEditor.Target.cs"
 	],
 	"EngineVersion": "5.5.4"
 }
