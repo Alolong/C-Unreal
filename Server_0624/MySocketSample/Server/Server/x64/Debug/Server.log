@@ -1,0 +1,49 @@
+﻿  Main.cpp
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(41,2): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(100,4): error C2065: 'ResultNumber': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(100,17): error C2146: syntax error: missing ';' before identifier 'R'
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(100,17): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(101,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(102,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(102,21): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(103,31): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(103,41): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(124,4): error C2065: 'ResultNumber': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(124,17): error C2146: syntax error: missing ';' before identifier 'R'
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(124,17): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(125,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(126,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(126,21): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(127,31): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(127,41): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(130,20): error C2838: 'C2S_Multiply': illegal qualified name in member declaration
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(130,20): error C2065: 'C2S_Multiply': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(130,20): error C2131: expression did not evaluate to a constant
+      C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(130,20):
+      a non-constant (sub-)expression was encountered
+  
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(148,4): error C2065: 'ResultNumber': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(148,17): error C2146: syntax error: missing ';' before identifier 'R'
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(148,17): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(149,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(150,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(150,21): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(151,31): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(151,41): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(172,4): error C2065: 'ResultNumber': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(172,17): error C2146: syntax error: missing ';' before identifier 'R'
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(172,17): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(173,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(174,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(174,21): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(175,31): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(175,41): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(196,4): error C2065: 'ResultNumber': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(196,17): error C2146: syntax error: missing ';' before identifier 'R'
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(196,17): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(197,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(198,4): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(198,21): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(199,31): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(199,41): error C2065: 'R': undeclared identifier
+C:\C-Unreal\Server_0624\MySocketSample\Server\Main.cpp(130,3): error C2051: case expression not constant
